@@ -16,4 +16,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 9090
-CMD [ "node", "server1.js" ]
+CMD [ "node", "s2.js" ]

@@ -16,4 +16,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 3030
-CMD [ "node", "server1.js" ]
+CMD [ "node", "s1.js" ]
