@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+
+  server1:
+    build: ./s1
+    container_name: server1
+    restart: unless-stopped
+    ports:
+      - "3030"
+
+  server2:
+    build: ./s2
+    container_name: server2
+    restart: unless-stopped
+    ports:
+      - "9090"
+
+  client:
+    build: ../kurs_client
+    container_name: client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server1
+      - server2
